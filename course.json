@@ -7,9 +7,11 @@
     {
       "title": "实验一：KNN分类实验",
       "environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-envs:cloudware-rstudio",
+      "binds": ["/kfcampus/public:/root/Desktop/myFile", "/userfile:/data:ro"],
       "steps": [
         {
-          "preload": "scripts/pre.sh",
+          "extraTab": "[domain]:[:5678]/desktop.html",
+          "program": "scripts/program.sh",
           "title": "实验一：KNN分类实验",
           "text": "scenarios/实验一：KNN分类实验.md"
         }
@@ -18,9 +20,11 @@
     {
       "title": "实验二：支持向量机分类实验",
       "environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-envs:cloudware-rstudio",
+      "binds": ["/kfcampus/public:/root/Desktop/myFile", "/userfile:/data:ro"],
       "steps": [
         {
-          "preload": "scripts/pre.sh",
+          "extraTab": "[domain]:[:5678]/desktop.html",
+          "program": "scripts/program.sh",
           "title": "实验二：支持向量机分类实验",
           "text": "scenarios/实验二：支持向量机分类实验.md"
         }
@@ -29,9 +33,11 @@
     {
       "title": "实验三：决策树分类实验",
       "environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-envs:cloudware-rstudio",
+      "binds": ["/kfcampus/public:/root/Desktop/myFile", "/userfile:/data:ro"],
       "steps": [
         {
-          "preload": "scripts/pre.sh",
+          "extraTab": "[domain]:[:5678]/desktop.html",
+          "program": "scripts/program.sh",
           "title": "实验三：决策树分类实验",
           "text": "scenarios/实验三：决策树分类实验.md"
         }
@@ -40,9 +46,11 @@
     {
       "title": "实验四：随机森林分类实验",
       "environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-envs:cloudware-rstudio",
+      "binds": ["/kfcampus/public:/root/Desktop/myFile", "/userfile:/data:ro"],
       "steps": [
         {
-          "preload": "scripts/pre.sh",
+          "extraTab": "[domain]:[:5678]/desktop.html",
+          "program": "scripts/program.sh",
           "title": "实验四：随机森林分类实验",
           "text": "scenarios/实验四：随机森林分类实验.md"
         }
@@ -51,9 +59,11 @@
     {
       "title": "实验五：神经网络分类实验",
       "environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-envs:cloudware-rstudio",
+      "binds": ["/kfcampus/public:/root/Desktop/myFile", "/userfile:/data:ro"],
       "steps": [
         {
-          "preload": "scripts/pre.sh",
+          "extraTab": "[domain]:[:5678]/desktop.html",
+          "program": "scripts/program.sh",
           "title": "实验五：神经网络分类实验",
           "text": "scenarios/实验五：神经网络分类实验.md"
         }
@@ -62,9 +72,11 @@
     {
       "title": "实验六：不同算法的比较",
       "environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-envs:cloudware-rstudio",
+      "binds": ["/kfcampus/public:/root/Desktop/myFile", "/userfile:/data:ro"],
       "steps": [
         {
-          "preload": "scripts/pre.sh",
+          "extraTab": "[domain]:[:5678]/desktop.html",
+          "program": "scripts/program.sh",
           "title": "实验六：不同算法的比较",
           "text": "scenarios/实验六：不同算法的比较.md"
         }

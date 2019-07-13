@@ -10,7 +10,7 @@
 
 KNN是k nearest neighbor 的简称，即k最邻近，就是找k个最近的实例投票决定新实例的类标。KNN是一种基于实例的学习算法，它不同于贝叶斯、决策树等算法，KNN不需要训练，当有新的实例出现时，直接在训练数据集中找k个最近的实例，把这个新的实例分配给这k个训练实例中实例数最多类。KNN也称为懒惰学习，它不需要训练过程，在类标边界比较整齐的情况下分类的准确率很高。KNN算法需要人为决定K的取值，即找几个最近的实例，k值不同，分类结果的结果也会不同。
 
-##算法源码
+## 算法源码
 ```
 function (formula = formula(train), train, test, na.action = na.omit(), 
     k = 7, distance = 2, kernel = "optimal", ykernel = NULL, 
@@ -195,7 +195,7 @@ function (formula = formula(train), train, test, na.action = na.omit(),
 
 看如下图的训练数据集的分布，该数据集分为3类（在图中以三种不同的颜色表示），现在出现一个待分类的新实例（图中绿色圆点），假设我们的K=3，即找3个最近的实例，这里的定义的距离为[欧氏距离](http://baike.baidu.cn/view/2898228.htm)，这样找据该待分类实例最近的三个实例就是以绿点为中心画圆，确定一个最小的半径，使这个圆包含K个点。
 
-[![](https://kfcoding-static.oss-cn-hangzhou.aliyuncs.com/gitcourse-bigdata/1-1_20171107135023.023.jpg)](http://www.x-lab.ac:13001/image/1-1_20171107135023.023.jpg)
+[![](/images/1-1_20171107135023.023.jpg)](http://www.x-lab.ac:13001/image/1-1_20171107135023.023.jpg)
 
 ### 算法：
 
@@ -219,18 +219,18 @@ function (formula = formula(train), train, test, na.action = na.omit(),
 >
 > * 欧几里得距离（Euclidean Distance）：
 >
->   [![](https://kfcoding-static.oss-cn-hangzhou.aliyuncs.com/gitcourse-bigdata/1-5_20171107140900.000.png)](http://www.x-lab.ac:13001/image/1-5_20171107140900.000.png)
+>   [![](/images/1-5_20171107140900.000.png)](http://www.x-lab.ac:13001/image/1-5_20171107140900.000.png)
 > * 明可夫斯基距离（Minkowski Distance）：
 >
->   [![](https://kfcoding-static.oss-cn-hangzhou.aliyuncs.com/gitcourse-bigdata/1-6_20171107140902.002.png)](http://www.x-lab.ac:13001/image/1-6_20171107140902.002.png)
+>   [![](/images/1-6_20171107140902.002.png)](http://www.x-lab.ac:13001/image/1-6_20171107140902.002.png)
 >
 > * 曼哈顿距离（Manhattan Distance）：
 >
->   [![](https://kfcoding-static.oss-cn-hangzhou.aliyuncs.com/gitcourse-bigdata/1-7_20171107140904.004.png)](http://www.x-lab.ac:13001/image/1-7_20171107140904.004.png)
+>   [![](/images/1-7_20171107140904.004.png)](http://www.x-lab.ac:13001/image/1-7_20171107140904.004.png)
 >
 > * 切比雪夫距离（Chebyshev Distance）
 >
->  [![](https://kfcoding-static.oss-cn-hangzhou.aliyuncs.com/gitcourse-bigdata/1-8_20171107140906.006.png)](http://www.x-lab.ac:13001/image/1-8_20171107140906.006.png)
+>  [![](/images/1-8_20171107140906.006.png)](http://www.x-lab.ac:13001/image/1-8_20171107140906.006.png)
 
 ### 参数选择：
 
@@ -275,14 +275,14 @@ function (formula = formula(train), train, test, na.action = na.omit(),
 ```
 
 在数据分析中，掌握必要的领域知识是很有必要的 ：比如在iris这个数据集中，你要明白所有的花朵都包含萼片和花瓣。 萼片包围花瓣，通常是绿色和叶状，而花瓣通常是有色的叶子。 对于鸢尾花，这只是有点不一样，如下图所示：
-[![](https://kfcoding-static.oss-cn-hangzhou.aliyuncs.com/gitcourse-bigdata/1-2_20171107135026.026.png)](http://www.x-lab.ac:13001/image/1-2_20171107135026.026.png)
+[![](/images/1-2_20171107135026.026.png)](http://www.x-lab.ac:13001/image/1-2_20171107135026.026.png)
 了解领域知识能帮助你更好地做之后的特征工程。
 
 #### 第二步：进一步了解数据，可视化
 
 首先，您可以通过制作一些图形（如直方图或boxplots）来尝试了解您的数据。 然而，在这种情况下，散点图可以让您很好地了解您正在处理的内容：可以看到有多少变量受到另一个变量的影响。换句话说，你想看看两个变量之间是否有任何关联。
 
-换句话说，你想看看两个变量之间是否有任何关联。例如，您可以使用ggvis包进行散点图。多说一句，在使用ggvis包之前，你需要加载它。相关变量的选择同学可以自行选择，同时您也可以选择其他的可视化工具，如ggplot2。
+例如，您可以使用ggvis包进行散点图。多说一句，在使用ggvis包之前，你需要加载它。相关变量的选择同学可以自行选择，同时您也可以选择其他的可视化工具，如ggplot2。
 
     # 加载`ggvis`
     # 如果遇到缺少**包，安装解决
@@ -292,7 +292,7 @@ function (formula = formula(train), train, test, na.action = na.omit(),
     iris %>% ggvis(~Sepal.Length, ~Sepal.Width, fill = ~Species) %>% layer_points()
 
 得到如下结果
-[![](https://kfcoding-static.oss-cn-hangzhou.aliyuncs.com/gitcourse-bigdata/1-3_20171107135027.027.png)](http://www.x-lab.ac:13001/image/1-3_20171107135027.027.png)
+[![](/images/1-3_20171107135027.027.png)](http://www.x-lab.ac:13001/image/1-3_20171107135027.027.png)
 
 ```
 #加载kknn包
@@ -319,7 +319,7 @@ pairs(data.test[1:4], pch = pcol, col = c("green3", "red")[(data.test$Species !=
 
 如上程序我们得到以下结果
 
-[![](https://kfcoding-static.oss-cn-hangzhou.aliyuncs.com/gitcourse-bigdata/1-4_20171107135029.029.png)](http://www.x-lab.ac:13001/image/1-4_20171107135029.029.png)
+[![](/images/1-4_20171107135029.029.png)](http://www.x-lab.ac:13001/image/1-4_20171107135029.029.png)
 
 ## 四 常见问题
 
@@ -336,4 +336,4 @@ pairs(data.test[1:4], pch = pcol, col = c("green3", "red")[(data.test$Species !=
    在训练集中，有些样本可能是更值得依赖的。可以给不同的样本施加不同的权重，加强依赖样本的权重，降低不可信赖样本的影响。
 
 5. **性能问题？**  
-   kNN是一种懒惰算法，平时不好好学习，考试（对测试样本分类）时才临阵磨枪（临时去找k个近邻）。懒惰的后果：构造模型很简单，但在对测试样本分类地的系统开销大，因为要扫描全部训练样本并计算距离。已经有一些方法提高计算的效率，例如压缩训练样本量等。
+   KNN是一种懒惰算法，平时不好好学习，考试（对测试样本分类）时才临阵磨枪（临时去找k个近邻）。懒惰的后果：构造模型很简单，但在对测试样本分类地的系统开销大，因为要扫描全部训练样本并计算距离。已经有一些方法提高计算的效率，例如压缩训练样本量等。
